@@ -22,6 +22,7 @@ function App() {
         allowFullScreen
         title="Thinking in React"
       />
+      <h1>{video.title}</h1>
       <Likes/>
       <Comments comments={comments} video={video}/>
     </div>
