@@ -1,7 +1,16 @@
+import React from 'react'
 import video from "../data/video.js";
+import Likes from "./Likes.jsx"
+import Comments from "./Comments.jsx"
+
 
 function App() {
   console.log("Here's your data:", video);
+
+  let comments = video.comments
+
+  console.log("Here's your comments:", comments);
+  
 
   return (
     <div className="App">
@@ -13,6 +22,8 @@ function App() {
         allowFullScreen
         title="Thinking in React"
       />
+      <Likes/>
+      <Comments comments={comments} video={video}/>
     </div>
   );
 }
